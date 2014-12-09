@@ -1,0 +1,22 @@
+{
+  "name": "jquery.anim",
+  "version": "0.1",
+  "authors": [
+    "IWABUCHI Yu(u)ki <k38647@gmail.com>"
+  ],
+  "description": "jQuery Step Animate Plugin",
+  "main": "jquery.anim.js",
+  "keywords": [
+    "jQuery",
+    "animation"
+  ],
+  "license": "MIT",
+  "homepage": "http://butchi.jp/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
