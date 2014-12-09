@@ -10,7 +10,7 @@ jquery.anim
     ██║  ██╗██║  ██║   ██║   ██║  ██║╚██████╗
     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝
 
-[http://www.kayac.com/](http://www.kayac.com/)
+    http://www.kayac.com/
 
 
 jQuery animation plug-in.
