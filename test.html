@@ -5,10 +5,15 @@
   <title>jquery.anim test</title>
 
   <style>
-.div1 {
+.elm-1 {
   position: absolute;
   display: block;
   top: 100px;
+}
+.elm-2 {
+  position: absolute;
+  display: block;
+  top: 150px;
 }
   </style>
 </head>
@@ -17,13 +22,15 @@
 
 <h1>jquery.anim</h1>
 
-<div class="div1">This is an example of jQuery.anim plug-in.</div>
+<p class="elm-1">This is an example of jQuery.anim plug-in.</p>
+<p class="elm-2">This is an example of jQuery.anim plug-in.</p>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./js/lib/jquery.easing.js"></script>
 <script src="./js/jquery.anim.js"></script> 
 <script>
 $(function() {
-  $('.div1').anim({
+  $('.elm-1').anim({
     duration: 2500,
     step: function(t) {
       this.css({
@@ -31,7 +38,19 @@ $(function() {
       });
     },
     complete: function() {
-      alert('Thanks, world!');
+      console.log('Thanks, world! 1');
+    }
+  });
+  $('.elm-2').anim({
+    duration: 2500,
+    easing: 'easeInExpo',
+    step: function(t) {
+      this.css({
+        'clip': 'rect(0 ' + (t * 600) + 'px 100px 0)'
+      });
+    },
+    complete: function() {
+      console.log('Thanks, world! 2');
     }
   });
 });

@@ -20,6 +20,7 @@
 ;(function($) {
     'use strict';
 
+    // ToDo: setInterval like arguments
     /**
      *  option.duration
      *  option.step {function} callback called for every speps
@@ -34,6 +35,7 @@
             _t: 1
         }, {
             duration: option.duration,
+            easing: option.easing,
             step: function(t) {
                 if(typeof option.step === 'function') {
                     option.step.call($this, t);
