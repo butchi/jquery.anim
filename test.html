@@ -30,23 +30,28 @@
 <script src="./js/jquery.anim.js"></script> 
 <script>
 $(function() {
-  $('.elm-1').anim({
+  var $elm1 = $('.elm-1');
+  var width1 = $elm1.width();
+  $elm1.anim({
     duration: 2500,
     step: function(t) {
-      this.css({
-        'clip': 'rect(0 ' + (t * 600) + 'px 100px 0)'
+      $(this).css({
+        'clip': 'rect(0 ' + (t * width1) + 'px 100px 0)'
       });
     },
     complete: function() {
       console.log('Thanks, world! 1');
     }
   });
-  $('.elm-2').anim({
+
+  var $elm2 = $('.elm-2');
+  var width2 = $elm2.width();
+  $elm2.anim({
     duration: 2500,
     easing: 'easeInExpo',
     step: function(t) {
-      this.css({
-        'clip': 'rect(0 ' + (t * 600) + 'px 100px 0)'
+      $(this).css({
+        'clip': 'rect(0 ' + (t * width2) + 'px 100px 0)'
       });
     },
     complete: function() {

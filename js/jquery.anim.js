@@ -29,7 +29,7 @@
     $.fn.anim = function(option) {
         var opts = $.extend({}, $.fn.anim.defaults, option);
 
-        var $this = $(this);
+        var _self = this;
 
         $({_t: 0}).animate({
             _t: 1
@@ -38,15 +38,15 @@
             easing: option.easing,
             step: function(t) {
                 if(typeof option.step === 'function') {
-                    option.step.call($this, t);
+                    option.step.call(_self, t);
                 }
             },
             complete: function() {
                 if(typeof option.step === 'function') {
-                    option.step.call($this, 1);
+                    option.step.call(_self, 1);
                 }
                 if(typeof option.complete === 'function') {
-                    option.complete.call($this);
+                    option.complete.call(_self);
                 }
             }
         });
@@ -55,7 +55,8 @@
     };
 
     $.fn.anim.defaults = {
-        duration: 1000
+        duration: 1000,
+        easing: 'linear'
     };
 
 }(jQuery));
