@@ -33,9 +33,7 @@
 
         $({_t: 0}).animate({
             _t: 1
-        }, {
-            duration: option.duration,
-            easing: option.easing,
+        }, $.extend(opts, {
             step: function(t) {
                 if(typeof option.step === 'function') {
                     option.step.call(_self, t);
@@ -49,7 +47,7 @@
                     option.complete.call(_self);
                 }
             }
-        });
+        }));
 
         return this;
     };
