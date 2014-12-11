@@ -1,7 +1,7 @@
 jquery.anim
 =================
 
-jQuery animation plug-in.
+jQuery step animation plug-in.
 
 ## Sample
 demo is [here](http://butchi.github.io/jquery.anim/) http://butchi.github.io/jquery.anim/
