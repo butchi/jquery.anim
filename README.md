@@ -3,6 +3,14 @@ jquery.anim
 
 jQuery step animation plug-in.
 
+## Setup
+
+download js/jquery.anim.js or install by bower
+
+```
+bower install jquery.anim
+```
+
 ## Sample
 demo is [here](http://butchi.github.io/jquery.anim/) http://butchi.github.io/jquery.anim/
 
